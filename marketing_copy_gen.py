@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Your API key setup here
-openai.api_key = "API_KEY"  # Replace with your actual key or use env var
+openai.api_key = os.getenv("API_KEY")
 
 # Session state for history
 if "history" not in st.session_state:
