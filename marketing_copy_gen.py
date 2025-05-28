@@ -1,8 +1,7 @@
 import streamlit as st
-import os
-import streamlit as st
+import openai
 
-# Your API key setup here
+# Load API key from Streamlit secrets
 openai.api_key = st.secrets["openai"]["api_key"]
 
 # Session state for history
