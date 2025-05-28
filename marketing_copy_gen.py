@@ -1,10 +1,9 @@
 import streamlit as st
 import os
-import openai
-from dotenv import load_dotenv
+import streamlit as st
 
 # Your API key setup here
-openai.api_key = os.getenv("API_KEY")
+openai.api_key = st.secrets["openai"]["api_key"]
 
 # Session state for history
 if "history" not in st.session_state:
